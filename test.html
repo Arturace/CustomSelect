@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The HTML5 Herald</title>
+  <!-- <meta name="description" content="The HTML5 Herald"> -->
+  <!-- <meta name="author" content="SitePoint"> -->
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+  <link rel="icon" href="data:,">
+  <script src="dist/settable-template.js"></script>
+  <script src="dist/custom-select-v2.js"></script>
+</head>
+<body>
+   <div style="margin-top: 55px">
+      <label>Custom select</label>
+      <br/>
+      <custom-select id="test" placeholder="wow!" value="24" label-template-id="testSelectLabelTemplate" option-template-id="testSelectOptionTemplate"> 
+            <option value="23">Item 1</option>
+            <option value="24">Item 2</option>
+            <option value="21">Item 3</option>
+            <option value="20">Item 4</option>
+      </custom-select>
+   </div>
+   <div style="margin-top: 55px">
+      <label>Standard select</label>
+      <br/>
+      <select>
+            <option value="23">Item 1</option>
+            <option value="24">Item 2</option>
+            <option value="21">Item 3</option>
+            <option value="20">Item 4</option>
+      </select>
+   </div> 
+   <template id=testSelectLabelTemplate>
+      <div style="border: 1px solid orange; box-sizing: border-box;">{{selectedValue}}</div>
+   </template>
+   <template id="testSelectOptionTemplate">
+      <div style="color: violet">{{content}}</div>
+   </template>
+</body>
+</html>
